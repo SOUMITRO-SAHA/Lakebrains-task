@@ -2,6 +2,16 @@
 
 ![Alt text](image.png)
 
+## Setup:
+
+- First: `npm install`
+- Second: `npm start`
+
+## Main Code Directory:
+
+`src/`
+
+
 ---
 
 ## Task Description
