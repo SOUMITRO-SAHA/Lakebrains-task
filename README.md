@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Frontend Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Alt text](image.png)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Task Description
 
-### `npm start`
+Create a search bar UI as given in the provided image `Search.png` in the project folder. After fetching data from the below-provided API, show the response in a popup overlay as given in the image `Overlay.png` in the project folder.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## API / API key
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Use the following API endpoint and API key to fetch weather data:
 
-### `npm test`
+- API Key: "840de593b7028de6e424162454790fe5"
+- Endpoint: "https://api.openweathermap.org/data/2.5/weather?q=[CITY_NAME]&units=metric&appid=[apiKey]"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Sample Response
 
-### `npm run build`
+Here is an example of the response you will receive from the API:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```json
+{
+  "coord": { "lon": 73.6918, "lat": 24.5712 },
+  "weather": [
+    { "id": 801, "main": "Clouds", "description": "few clouds", "icon": "02d" }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 31.5,
+    "feels_like": 29.82,
+    "temp_min": 31.5,
+    "temp_max": 31.5,
+    "pressure": 1014,
+    "humidity": 25,
+    "sea_level": 1014,
+    "grnd_level": 950
+  },
+  "visibility": 10000,
+  "wind": { "speed": 3.07, "deg": 104, "gust": 4.28 },
+  "clouds": { "all": 14 },
+  "dt": 1698649585,
+  "sys": {
+    "type": 1,
+    "id": 9072,
+    "country": "IN",
+    "sunrise": 1698628228,
+    "sunset": 1698668831
+  },
+  "timezone": 19800,
+  "id": 1253986,
+  "name": "Udaipur",
+  "cod": 200
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Please show below mentioned points in the Overlay UI:
+- "name": "city name",
+- "temp": 31.5,
+- "main": "Clouds", "description": "few clouds"
